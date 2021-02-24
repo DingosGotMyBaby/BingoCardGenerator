@@ -83,6 +83,7 @@
 </style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
 /*jslint browser: true, devel: true */
 /* global $ */
@@ -243,6 +244,7 @@ var bingoGenerator = {
 
         // Jump to results
         location.href = '#results';
+        twemoji.parse(document.body);
 
     },
 
@@ -347,19 +349,19 @@ $(document).ready(bingoGenerator.checkQS);
 	<p id="intro">I've provided a sample to create bingo cards for a day in the park. You can enter your own settings to create your own custom bingo cards.</p>
 	<fieldset>
 		<legend>Bingo Card Basics</legend>
-		<label>Card Title <input type="text" name="title" id="title" value="Day in the Park Bingo"></label>
-		<label>Word List (separated by commas)</label><textarea cols="60" rows="8" name="words" id="words">Flowers,Bees,Picnickers,Ants,Little Kid Crying,Holding Hands,Person Napping,A Balloon,Dogs,Frisbee,Stroller,Chess Players,Rollerskates,Musician,Juggler,Photographer,Painter,Plastic Bag in Tree,Squirrel,Pigeon,Bicycle Built for Two,Ice Cream,Sunbather,Person Reading Newspaper,Person Listening to Radio,Sidewalk Chalk,Hopscotch</textarea>
+		<label>Card Title <input type="text" name="title" id="title" value="HOA BNGO"></label>
+		<label>Word List (separated by commas)</label><textarea cols="60" rows="8" name="words" id="words">🐸,🤔,💹,🦶,🚗,🦀,👍,📈,👩‍🌾,⏬,🎶,🦈,🔥,🚪,🖐,🎹,🤦‍♂️,⬇,💚,🦞,🙂,💖,🌴,😎,😍,❤,🤣,😂,😊,⏫,👏,🎁,😒,👌,😘,💕,😁,🙌,🤦‍♀️,🤷‍♀️,</textarea>
 	</fieldset>	
 
 	<fieldset>
 		<legend>Free Space</legend>
 		<label>Include a free space? 
 			<select name="freespace" id="freespace">
-				<option value="true" selected="selected">Yes</option>
-				<option value="false">No</option>
+				<option value="true" >Yes</option>
+				<option value="false" selected="selected">No</option>
 			</select>
 		</label>
-		<label>Free Space Text <input type="text" name="freespaceValue" id="freespaceValue" value="Park Bench"></label>
+		<label>Free Space Text <input type="text" name="freespaceValue" id="freespaceValue" value="Tavern"></label>
         <label>Free Space Description <input type="text" name="freespaceSubheadingValue" id="freespaceSubheadingValue" value="Free Space"></label>
 		<label>Free Space Placement
 			<select name="freespaceRandom" id="freespaceRandom">
@@ -372,8 +374,8 @@ $(document).ready(bingoGenerator.checkQS);
 	<fieldset>
 		<legend>Card Size</legend>
 		<p>A 5x5 bingo card is traditional, but you can try other sizes</p>
-		<label>Number of Squares Wide <input type="text" name="width" id="width" value="5"></label>
-		<label>Number of Squares Tall <input type="text" name="height" id="height" value="5"></label>
+		<label>Number of Squares Wide <input type="text" name="width" id="width" value="4"></label>
+		<label>Number of Squares Tall <input type="text" name="height" id="height" value="4"></label>
 	</fieldset>
 
 	
@@ -388,20 +390,5 @@ $(document).ready(bingoGenerator.checkQS);
 
 <div id="results"></div>
 
-<div id="footer">
-<a href="/bingo-card-generator/faq.html">Questions?</a> Comments? Contact chris @ osric . com
-</div>
-
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19082249-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 </body>
 </html>
